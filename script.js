@@ -9,5 +9,5 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     const authority = document.getElementById('authority').value;
 
     // You can now process these values, like sending them to a server or displaying a message
-    alert(`User created: \nName: ${name} \nUsername: ${username} \nEmail: ${email} \nPhone: ${phone} \nAuthority Level: ${authority}`);
+    alert(`User created: \nName: ${name} \nUsername: ${username} \nEmail: ${email} \nPhone: ${phone} \nAuthority Level: ${authority} \nNow entering Dashboard`);
 });
