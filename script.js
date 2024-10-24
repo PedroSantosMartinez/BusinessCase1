@@ -10,4 +10,14 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
     // You can now process these values, like sending them to a server or displaying a message
     alert(`User created: \nName: ${name} \nUsername: ${username} \nEmail: ${email} \nPhone: ${phone} \nAuthority Level: ${authority} \nNow entering Dashboard`);
+
+
+   // Store data in localStorage
+   localStorage.setItem('name', name);
+   localStorage.setItem('username', username);
+   localStorage.setItem('email', email);
+   localStorage.setItem('phone', phone);
+
+   // Redirect to dashboard after sign-up
+   window.location.href = 'dashboard.html';
 });
