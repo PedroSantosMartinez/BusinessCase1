@@ -1,233 +1,113 @@
+/* Variables for commonly used colors */
+:root {
+    --bg-dark: #333;
+    --bg-light: #d9d9d9;
+    --text-white: #fff;
+    --text-black: #000;
+    --green: #4caf50;
+    --hover-green: #7bbb57;
+    --font-inter: 'Inter', sans-serif;
+}
+
+/* General Styles */
 body {
-    background-color: #333;
+    background-color: var(--bg-dark);
+    font-family: var(--font-inter);
+    margin: 0;
 }
 
 .dashboard-container {
-    background-color: #333;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
     padding: 11px 0 70px;
 }
 
-.content-wrapper {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    padding: 0 25px;
-}
-
 .header-bar {
-    background-color: #d9d9d9;
+    background-color: var(--bg-light);
+    padding: 20px;
     display: flex;
-    align-items: start;
-    gap: 20px;
-    font-family: Inter, sans-serif;
-    color: #000;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 18px;
+    align-items: center;
 }
 
-.user-info {
-    font-size: 20px;
+.profile-image {
+    width: 44px;
+    object-fit: contain;
 }
 
 .page-title {
     font-size: 30px;
     font-weight: 600;
-}
-
-.profile-image {
-    aspect-ratio: 1.07;
-    object-fit: contain;
-    object-position: center;
-    width: 44px;
+    color: var(--text-black);
 }
 
 .system-title {
-    color: #fff;
-    align-self: start;
-    margin: 46px 0 0;
-    font: 600 30px Inter, sans-serif;
+    color: var(--text-white);
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 46px;
 }
 
 .addSystem {
-    background-color: #4caf50;
-    color: #000;
+    background-color: var(--green);
+    color: var(--text-black);
     padding: 10px 15px;
     border: 2px solid black;
     cursor: pointer;
-    margin-left: 10px;
-    width: 200px;
+    transition: background-color 0.4s;
+    margin-top: 10px;
 }
 
+.addSystem:hover {
+    background-color: var(--hover-green);
+}
+
+/* Sensor Section */
 .sensor-grid {
-    border-radius: 4px;
-    background-color: #d9d9d9;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 45px;
-    width: 100%;
-    color: #000;
+    background-color: var(--bg-light);
+    color: var(--text-black);
     text-align: center;
-    font: 600 25px/1.3 Inter, sans-serif;
-    border: 2px solid #000;
-   
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 45px;
+    border: 2px solid var(--text-black);
+    padding: 10px;
 }
 
 .sensor-row {
     display: flex;
-    width: 100%;
-    justify-content: start;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .sensor-cell {
-    background-color: rgba(0, 0, 0, 0.06);
-    border: 1px solid #000;
-    min-width: 240px;
-    padding: 10px 12px;
     flex: 1;
-    flex-basis: 0%; 
-    border-inline-color: red;
+    padding: 10px;
+    border: 1px solid var(--text-black);
 }
 
-.controls-container {
-    align-self: center;
-    display: flex;
-    margin-top: 21px;
-    width: 100%;
-    max-width: 1035px;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.light-status {
-    background-color: #d9d9d9;
-    width: 105px;
-    height: 35px;
-
-}
-
-.bottom-section {
-    display: flex;
-    width: 100%;
-    max-width: 1356px;
-    gap: 20px;
-    font-size: 30px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 125px 0 0 25px;
-}
-
-.alarm-controls {
-    display: flex;
-    gap: 35px;
-}
-
+/* Alarm Controls */
 .alarm-status {
-    display: flex;
-    flex-direction: column;
-}
-
-.alarm-label {
-    color: #fff;
-    font-family: Inter, sans-serif;
-    font-weight: 600;
-    line-height: 1.3;
     text-align: center;
 }
 
-.alarm-on {
-    background-color: #d9d9d9;
-    margin-top: 46px;
-    font-family: Lato, sans-serif;
-    color: #000;
+.alarm-on, .alarm-off {
+    background-color: var(--bg-light);
+    padding: 10px;
     font-weight: 700;
-    padding: 1px 34px 12px;
 }
 
-.alarm-off {
-    background-color: #d9d9d9;
-    margin-top: 68px;
-    font-family: Lato, sans-serif;
-    color: #000;
-    font-weight: 700;
-    padding: 1px 34px 11px;
-}
-
+/* User Management */
 .user-management {
-    display: flex;
-    margin-top: 8px;
-    flex-direction: column;
-    font-family: Lato, sans-serif;
-    font-weight: 700;
-    
-}
-
-.user-title {
-    color: #fff;
-    align-self: center;
-}
-
-.manage-users {
-    background-color: #d9d9d9;
-    color: #000;
-    margin: 31px 21px 0 22px;
-    padding: 3px 0 10px;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .user-list {
-    background-color: #d9d9d9;
-    margin-top: 47px;
-    height: 337px;
+    background-color: var(--bg-light);
+    height: 150px;
+    margin-top: 20px;
 }
 
 @media (max-width: 991px) {
-    .content-wrapper {
-        max-width: 100%;
-        padding-left: 20px;
-    }
-
-    .header-bar {
-        max-width: 100%;
-        padding-right: 20px;
-    }
-
-    .system-title {
-        margin-top: 40px;
-    }
-
-    .sensor-grid {
-        max-width: 100%;
-        margin-top: 40px;
-    }
-
-    .controls-container {
-        max-width: 100%;
-    }
-
-    .bottom-section {
-        max-width: 100%;
-        margin-top: 40px;
-    }
-
-    .alarm-on {
-        margin-top: 40px;
-        padding: 0 20px;
-    }
-
-    .alarm-off {
-        margin-top: 40px;
-        padding: 0 20px;
-    }
-
-    .manage-users {
-        margin: 0 10px;
-    }
-
-    .user-list {
-        margin-top: 40px;
+    .sensor-row, .content-wrapper, .header-bar {
+        flex-wrap: wrap;
     }
 }

@@ -2,33 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
     <title>Dashboard</title>
 </head>
 <body>
-    
     <section class="dashboard-container">
         <div class="content-wrapper">
             <header class="header-bar">
                 <p class="user-info">User - <span id="displayUsername"></span></p>
                 <h1 class="page-title">Dashboard</h1>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5126513884248f3f29931b7e3bebad130f876662f7ee7ce2749eb58f31611ecf?placeholderIfAbsent=true&apiKey=706f45d0e04d4fed994d434b193589dd" alt="Profile Image" class="profile-image" />
+                <img loading="lazy" src="profile.jpg" alt="Profile Image" class="profile-image" />
             </header>
 
-    <!-- Other dashboard content -->
+            <h2 class="system-title">Sensor System</h2>
+            <button class="addSystem">Add System</button>
 
-    <!--  <div class="dashboard">
-          <div class="dashboard-header">
-              <div class="user-username">User - (username)</div>
-              <div class="dashboard-title">Dashboard</div>
-              <img class="dashboard-icon" alt="Star Icon" src="Star 1.svg">
-          </div> -->
-  
-
-    <h2 class="system-title">Sensor System</h2>
-          <!-- Button goes to another page -->
-        <button id="sensorpagebtn" class="addSystem">Add System</button>
             <section class="sensor-grid">
                 <div class="sensor-row">
                     <div class="sensor-cell">Fire</div>
@@ -37,33 +26,18 @@
                 </div>
             </section>
 
-            <!-- This is the button that shows the light status of alarm-->  
-    <div class="controls-container"> 
-
-        <!-- I attempted to use aria-label as a way for more people to access content (with disability or other issues)-->     
-        <button class="light-status" aria-label="The Light Status for alarm"></button>
-        <button class="light-status" aria-label="The Light Status for alarm"></button>
-        <button class="light-status" aria-label="The Light Status for alarm"></button>
-    </div>
-            <!-- If clicked it would take you to manage alarm alarm for that specify alarm-->
-            <!-- You are able to switch between the three alarm WIP -->
-
-
-    <section class="bottom-section">
-        <div class="alarm-controls">
             <div class="alarm-status">
-                <h3 class="alarm-label">Alarm</h3>
-                    <button class="alarm-on">On</button>
-                </div>
-            <button class="alarm-off">Off</button>
-        </div>
-
-    <div class="user-management">
-        <h3 class="user-title">Another User</h3>
-            <button class="manage-users">Manage/Create New User</button>
-                <div class="user-list" aria-label="User List"></div>
+                <h3>Alarm</h3>
+                <button class="alarm-on">On</button>
+                <button class="alarm-off">Off</button>
             </div>
-        </section>
+
+            <div class="user-management">
+                <h3>Manage Users</h3>
+                <button class="manage-users">Manage/Create User</button>
+                <div class="user-list"></div>
+            </div>
+        </div>
     </section>
 
     <script src="script.js"></script>
