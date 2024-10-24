@@ -10,34 +10,31 @@
     <div class="container">
         <h1>Manage/Create User</h1>
         <div class="form-container">
-            <form class="create-user-form" id="userForm">
+            <form class="create-user-form" id="signupForm">
                 <input type="text" id="signupUsername" placeholder="Username" required>
-
                 <input type="email" id="signupEmail" placeholder="Email" required>
-
                 <input type="password" id="signupPassword" placeholder="Password" required>
                 <small id="passwordError" class="error-text"></small>
-
                 <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
                 <small id="confirmPasswordError" class="error-text"></small>
-
                 <button type="submit" class="submit-button">Sign Up</button>
-                <small id="userSuccess" class="success-message">User created successfuly!</small>
-                </form>
-
+                <small id="signupSuccess" class="success-message">User created successfully!</small>
+            </form>
+            
             <div class="manage-user">
                 <h2>Manage User</h2>
                 <ul id="userList"></ul>
-                <button class="see-more-button" onclick="showPopup()">See More Users</button></div>
+                <button id="openModalBtn" class="see-more-button">See More Users</button>
+            </div>
         </div>
     </div>
 
-    <!-- Modal for displaying more users -->
-    <div id="userModal" class="modal">
+    <!-- Modal -->
+    <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>All Users</h2>
-            <ul id="modalUserList"></ul>
+            <h2>Registered User</h2>
+            <ul id="userListModal"></ul> <!-- This will display the list of users in the modal -->
         </div>
     </div>
 
