@@ -110,3 +110,22 @@ h1 {
     color: white;
     cursor: pointer;
 }
+
+.manage-user {
+    display: flex;
+    justify-content: center;
+}
+
+.see-more-button {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding: 5%;
+    border: none;
+    cursor: pointer;
+    height: 20%;
+}
+
+.see-more-button:hover {
+    background-color: green;
+}
