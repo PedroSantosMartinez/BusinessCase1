@@ -3,42 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="dashboard-container">
-        <div class="content-wrapper">
-            <header class="header-bar">
-                <p class="user-info">User - <span id="displayUsername"></span></p>
-                <h1 class="page-title">Dashboard</h1>
-                <img loading="lazy" src="profile.jpg" alt="Profile Image" class="profile-image" />
-            </header>
-
-            <h2 class="system-title">Sensor System</h2>
-            <button class="addSystem">Add System</button>
-
-            <section class="sensor-grid">
-                <div class="sensor-row">
-                    <div class="sensor-cell">Fire</div>
-                    <div class="sensor-cell">Smoke</div>
-                    <div class="sensor-cell">Heat</div>
-                </div>
-            </section>
-
-            <div class="alarm-status">
-                <h3>Alarm</h3>
-                <button class="alarm-on">On</button>
-                <button class="alarm-off">Off</button>
+    <div class="dashboard">
+        <div class="header">
+            <p>User - <span id="displayUsername">(username)</span></p>
+            <h2>Dashboard</h2>
+            <button class="favorite">★</button>
+        </div>
+        
+        <div class="sensor-system">
+            <p>Sensor System</p>
+            <button class="add-button" id="sensorPageBtn">Add</button>
+            <div class="sensor-table">
+                <div>Fire</div>
+                <div>Smoke</div>
+                <div>Heat</div>
             </div>
-
-            <div class="user-management">
-                <h3>Manage Users</h3>
-                <button class="manage-users">Manage/Create User</button>
-                <div class="user-list"></div>
+            <div class="sensor-status">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
-    </section>
+        
+        <div class="alarm">
+            <p>Alarm</p>
+            <button class="alarm-on">On</button>
+            <button class="alarm-off">Off</button>
+        </div>
+        
+        <div class="user-management">
+            <p>Another User</p>
+            <button class="manage-user-button" onclick="goToUserPage()">Manage/Create New User</button>
+            <div class="status-indicator" id="statusIndicator"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
