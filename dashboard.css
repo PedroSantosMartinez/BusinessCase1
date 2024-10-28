@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.dashboard {
+    padding: 20px;
+    background-color: #333;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 400px;
+    width: 1000px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.favorite {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sensor-system {
+    margin-bottom: 20px;
+    position: relative;
+    top: -350px;
+}
+
+.sensor-system p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.add-button {
+    padding: 5px 15px;
+    background-color: #ccc;
+    border: 2px solid #888;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sensor-table {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.sensor-table div {
+    width: 30%;
+    padding: 10px;
+    background-color: #777;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.sensor-status {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.sensor-status div {
+    width: 30%;
+    height: 25px;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+.alarm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.alarm p {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 15px;
+    background-color: #888;
+    border: 2px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #000;
+    font-size: 14px;
+}
+
+.user-management {
+    margin-top: 20px;
+}
+
+.user-management p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.manage-user-button {
+    padding: 5px 15px;
+    background-color: #888;
+    border: 2px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #000;
+}
+
+.status-indicator {
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: red; /* Default offline status */
+}
