@@ -1,4 +1,4 @@
-/* General Reset to remove default browser stylings */
+/* General reset to remove default browser styling */
 * {
     margin: 0;
     padding: 0;
@@ -36,13 +36,13 @@ h1 {
     margin-top: 20px;
 }
 
-.create-alarm-form {
+.create-user-form {
     display: flex;
     flex-direction: column;
     width: 45%; /* Form takes up half the container width */
 }
 
-.create-alarm-form input {
+.create-user-form input {
     padding: 10px;
     margin-bottom: 15px;
     border: none; /* Remove default borders */
@@ -111,7 +111,10 @@ h1 {
     cursor: pointer;
 }
 
-
+.manage-user {
+    display: flex;
+    justify-content: center;
+}
 
 .see-more-button {
     width: 100%;

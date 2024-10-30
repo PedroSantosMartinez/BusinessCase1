@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage/Create User</title>
+    <link rel="stylesheet" href="createUser.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manage/Create User</h1>
+        <div class="form-container">
+            <form class="create-user-form" id="signupForm">
+                <input type="text" id="signupUsername" placeholder="Username" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <small id="passwordError" class="error-text"></small>
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+                <small id="confirmPasswordError" class="error-text"></small>
+                <button type="submit" class="submit-button">Sign Up</button>
+                <small id="signupSuccess" class="success-message">User created successfully!</small>
+            </form>
+            
+            <div class="manage-user">
+                <h2>Manage User</h2>
+                <ul id="userList"></ul>
+                <button id="openModalBtn" class="see-more-button">See More Users</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Registered User</h2>
+            <ul id="userListModal"></ul> <!-- This will display the list of users in the modal(pop-up like) -->
+        </div>
+    </div>
+
+    <script src="createUser.js"></script>
+</body>
+</html>

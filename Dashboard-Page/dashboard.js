@@ -31,13 +31,14 @@ function setAlarmStatus(status) {
 const sensorPageBtn = document.getElementById('sensorPageBtn');
 if (sensorPageBtn) {
     sensorPageBtn.addEventListener('click', () => {
-        window.location.href = 'sensor-page.html'; // Link to the sensor page
+        window.location.href = '../Manage-Sensor/man-sensor.html'; // Link to the sensor page
     });
 }
 
 // Event listener for the "Manage/Create New User" button to navigate to user page
-function goToUserPage() {
-    alert("Navigating to Manage/Create New User Page...");
-    // Uncomment this to link to an actual page
-    // window.location.href = "user.html";
+const userPageBtn = document.getElementById('userPageBtn')
+if (userPageBtn) {
+    userPageBtn.addEventListener('click', () => {
+        window.location.href = "../Create-User/createUser.html";
+    });
 }
