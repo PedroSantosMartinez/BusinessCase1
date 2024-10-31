@@ -67,3 +67,11 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+// Event listener for the "Go Back to Dashboard" button to navigate to Dashboard page
+const backDashboardBtn = document.getElementById('backDashboardBtn');
+if (backDashboardBtn) {
+    backDashboardBtn.addEventListener('click', () => {
+        window.location.href = '../Dashboard-Page/dashboard.html'; // Link to the Dashboard page
+    });
+}

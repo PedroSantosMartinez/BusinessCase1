@@ -15,6 +15,20 @@ body {
     height: 100vh; /* Full viewport height */
 }
 
+.go-back-Dashboard {
+    padding: 5px 15px;
+    background-color: #ccc;
+    border: 2px solid #888;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+}
+
 .container {
     width: 55%;
     background-color: #2c2c2c; /* Dark container background */
@@ -109,11 +123,6 @@ h1 {
     font-size: 24px;
     color: white;
     cursor: pointer;
-}
-
-.manage-user {
-    display: flex;
-    justify-content: center;
 }
 
 .see-more-button {
