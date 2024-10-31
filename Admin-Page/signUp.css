@@ -28,7 +28,8 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="password"],
+input[type="confirm"] {
     width: 100%;
     padding: 8px;
     margin: 8px 0;
