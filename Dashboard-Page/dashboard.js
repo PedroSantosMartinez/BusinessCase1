@@ -42,3 +42,35 @@ if (userPageBtn) {
         window.location.href = "../Create-User/createUser.html";
     });
 }
+
+// Function to display all existing alarms in the logs div
+function displayAlarmLogs() {
+    const logsDiv = document.querySelector('.logs');
+    const noLogsMessage = document.getElementById('noLogsMessage');
+
+    // Get alarms from localStorage
+    const alarms = JSON.parse(localStorage.getItem('alarms')) || [];
+
+    // Clear any previous logs
+    logsDiv.innerHTML = ''; // Clears all existing content
+
+    // If no alarms are found, display the 'No recent sensor log available' message
+    if (alarms.length === 0) {
+        noLogsMessage.style.display = 'block';
+        logsDiv.appendChild(noLogsMessage); // Re-add the message to the logsDiv
+    } else {
+        noLogsMessage.style.display = 'none'; // Hide the 'no logs' message
+
+        // Loop through each alarm and create a log entry
+        alarms.forEach(alarm => {
+            const logEntry = document.createElement('p');
+            logEntry.textContent = `Alarm Name: ${alarm.alarmName}, Alarm Type: ${alarm.alarmType}, Floor: ${alarm.floor}, Delay Time: ${alarm.delayTime}`;
+            logsDiv.appendChild(logEntry);
+        });
+    }
+}
+
+// Call this function to display logs on page load or any event
+window.onload = function() {
+    displayAlarmLogs();
+};
